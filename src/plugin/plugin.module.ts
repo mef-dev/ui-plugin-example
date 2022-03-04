@@ -7,15 +7,19 @@ import {jqxGridModule} from 'jqwidgets-ng/jqxgrid';
 import {jqxDateTimeInputModule} from 'jqwidgets-ng/jqxdatetimeinput';
 import {jqxDropDownListModule} from 'jqwidgets-ng/jqxdropdownlist';
 import {jqxChartModule} from 'jqwidgets-ng/jqxchart';
+import {TabsModule} from "ngx-bootstrap/tabs";
 
 import {TranslateModule} from '@ngx-translate/core';
 import {PLUGIN_VERSION} from 'src/environments/version';
 
 import {PluginComponent} from './plugin.component';
-import {SimpleItemComponent} from './components/simple-item.component';
+import {TabsSetComponent} from './components/tabs-set.component';
 import {CustomerAccountsService} from './services/customer-account.service';
 import {FakeCustomerAccountsService} from './services/fake-customer-account.service';
 import {PluginRoutes, devMode} from './plugin.routing';
+import { BitcoinComponent } from './components/bitcoin/bitcoin.component';
+import { MargaritaComponent } from './components/margarita/margarita.component';
+import { ExampleComponent } from './components/example/example.component';
 
 export const SETTINGS = new InjectionToken('SETTINGS');
 
@@ -28,6 +32,7 @@ const importsModules: any[] = [
     jqxDropDownListModule,
     jqxChartModule,
     HttpClientModule,
+    TabsModule.forRoot(),
     PluginRoutes
 ];
 
@@ -37,7 +42,7 @@ if (devMode) {
 
 @NgModule({
     imports: importsModules,
-    declarations: [PluginComponent, SimpleItemComponent],
+    declarations: [PluginComponent, TabsSetComponent, BitcoinComponent, MargaritaComponent, ExampleComponent],
     providers: [
         HttpClient,
         {
