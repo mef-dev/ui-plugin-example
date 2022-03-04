@@ -16,10 +16,11 @@ import {PluginComponent} from './plugin.component';
 import {TabsSetComponent} from './components/tabs-set.component';
 import {CustomerAccountsService} from './services/customer-account.service';
 import {FakeCustomerAccountsService} from './services/fake-customer-account.service';
-import {PluginRoutes, devMode} from './plugin.routing';
-import { BitcoinComponent } from './components/bitcoin/bitcoin.component';
-import { MargaritaComponent } from './components/margarita/margarita.component';
-import { ExampleComponent } from './components/example/example.component';
+import {PluginRoutes} from './plugin.routing';
+import {BitcoinComponent} from './components/bitcoin/bitcoin.component';
+import {MargaritaComponent} from './components/margarita/margarita.component';
+import {ExampleComponent} from './components/example/example.component';
+import {NgxDatatableModule} from "@swimlane/ngx-datatable";
 
 export const SETTINGS = new InjectionToken('SETTINGS');
 
@@ -33,16 +34,21 @@ const importsModules: any[] = [
     jqxChartModule,
     HttpClientModule,
     TabsModule.forRoot(),
+    NgxDatatableModule,
+    BrowserModule,
     PluginRoutes
 ];
 
-if (devMode) {
-    importsModules.push(BrowserModule);
-}
 
 @NgModule({
     imports: importsModules,
-    declarations: [PluginComponent, TabsSetComponent, BitcoinComponent, MargaritaComponent, ExampleComponent],
+    declarations: [
+        PluginComponent,
+        TabsSetComponent,
+        BitcoinComponent,
+        MargaritaComponent,
+        ExampleComponent
+    ],
     providers: [
         HttpClient,
         {
