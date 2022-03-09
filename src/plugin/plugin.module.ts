@@ -3,11 +3,16 @@ import {InjectionToken, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {MatTabsModule} from '@angular/material/tabs';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button'
+import {MatListModule} from '@angular/material/list';
+
 import {jqxGridModule} from 'jqwidgets-ng/jqxgrid';
 import {jqxDateTimeInputModule} from 'jqwidgets-ng/jqxdatetimeinput';
 import {jqxDropDownListModule} from 'jqwidgets-ng/jqxdropdownlist';
 import {jqxChartModule} from 'jqwidgets-ng/jqxchart';
-import {TabsModule} from "ngx-bootstrap/tabs";
 
 import {TranslateModule} from '@ngx-translate/core';
 import {PLUGIN_VERSION} from 'src/environments/version';
@@ -33,9 +38,13 @@ const importsModules: any[] = [
     jqxDropDownListModule,
     jqxChartModule,
     HttpClientModule,
-    TabsModule.forRoot(),
+    MatTabsModule,
     NgxDatatableModule,
     BrowserModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatListModule,
     PluginRoutes
 ];
 

@@ -1,29 +1,47 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {TabsSetService} from "../../services/tabs-set.service";
 import {takeUntil} from "rxjs/operators";
 import {ReplaySubject} from "rxjs";
 
 @Component({
     selector: 'app-margarita',
-    templateUrl: './margarita.component.html'
+    templateUrl: './margarita.component.html',
+    styleUrls: ['./margarita.component.scss'],
 })
-export class MargaritaComponent implements OnInit {
-
+export class MargaritaComponent implements OnInit, OnDestroy {
+    margaritas = [];
+    isLoading = false;
     destroy: ReplaySubject<any> = new ReplaySubject<any>(1);
 
     constructor(private apiService: TabsSetService) {
-    }
-
-    ngOnInit(): void {
+        this.isLoading = true;
         this.apiService.getMargaritas()
             .pipe(takeUntil(this.destroy))
             .subscribe(res => {
-            console.log(res)
-        })
+                this.margaritas = res.drinks;
+                this.isLoading = false;
+                console.log(res)
+                console.log(this.margaritas)
+            })
+    }
+
+    ngOnInit(): void {
+
     }
 
     ngOnDestroy(): void {
         this.destroy.next(null);
         this.destroy.complete();
+    }
+
+    getIngredients(item: any): any {
+        let result = []
+        const regexp = new RegExp('strIngredient');
+        Object.keys(item).filter(ingredient => regexp.test(ingredient)).forEach((name, i) => {
+            if (item[name]) {
+                result.push({ingredient: item[name], measure: item['strMeasure' + (i + 1)]})
+            }
+        })
+       return result;
     }
 }
