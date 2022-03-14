@@ -1,3 +1,21 @@
-<p>
-    example works!
-</p>
+<div class="example-container">
+    <form [formGroup]="options">
+        <mat-form-field floatLabel="always" appearance="outline">
+            <input matInput type="text" placeholder="First name" [formControl]="firstNameControl">
+        </mat-form-field>
+
+        <mat-form-field floatLabel="always" appearance="outline">
+            <input matInput type="text" placeholder="Surname" [formControl]="surnameControl">
+        </mat-form-field>
+
+        <mat-form-field class="formFieldEmail" floatLabel="always" appearance="outline">
+            <input matInput type="email" placeholder="NAME@COMPANY.COM"
+                   [formControl]="emailControl">
+            <mat-error *ngIf="emailControl.errors?.pattern">
+                Please enter a valid email.
+            </mat-error>
+        </mat-form-field>
+        <mat-checkbox [formControl]="agreeRequiredControl"> I agree to the Terms and Privacy</mat-checkbox>
+    </form>
+    <button mat-raised-button color="primary">Submit</button>
+</div>

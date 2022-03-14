@@ -1,13 +1,16 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {InjectionToken, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {MatTabsModule} from '@angular/material/tabs';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button'
 import {MatListModule} from '@angular/material/list';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatInputModule} from "@angular/material/input";
 
 import {jqxGridModule} from 'jqwidgets-ng/jqxgrid';
 import {jqxDateTimeInputModule} from 'jqwidgets-ng/jqxdatetimeinput';
@@ -45,12 +48,18 @@ const importsModules: any[] = [
     MatCardModule,
     MatButtonModule,
     MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatCheckboxModule,
     PluginRoutes
 ];
 
 
 @NgModule({
-    imports: importsModules,
+    imports: [
+        importsModules
+    ],
     declarations: [
         PluginComponent,
         TabsSetComponent,
