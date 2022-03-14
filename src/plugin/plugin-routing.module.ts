@@ -8,8 +8,8 @@ export const routes: Routes = [
         component: PluginComponent,
         children:
             [
-                {path: '', redirectTo: 'item', pathMatch: 'full'},
-                {path: 'item', component: TabsSetComponent},
+                {path: '', redirectTo: 'tabs', pathMatch: 'full'},
+                {path: 'tabs', component: TabsSetComponent},
             ]
     },
 ];

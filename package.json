@@ -1,6 +1,6 @@
 {
-  "name": "app-customers",
-  "version": "1.0.40",
+  "name": "app-tabs",
+  "version": "1.0.1",
   "scripts": {
     "ng": "ng",
     "start": "npm run prebuild && ng serve --configuration=development --port=4201",
@@ -46,7 +46,8 @@
     "sass": "^1.49.7",
     "tslib": "^2.3.1",
     "xlsx": "^0.17.2",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "typescript": "^4.3.5"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.6",
@@ -88,6 +89,6 @@
     "systemjs": "^6.12.1",
     "ts-node": "~10.2.1",
     "tslint": "~6.1.0",
-    "typescript": "4.3.5"
+    "typescript": "^4.3.5"
   }
 }

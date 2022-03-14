@@ -4,7 +4,7 @@ import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 @Component({
     selector: 'app-example',
     templateUrl: './example.component.html',
-    styleUrls: ['./example.component.scss'],
+    styleUrls: ['./example.component.scss']
 })
 export class ExampleComponent  {
     options: FormGroup;
@@ -18,7 +18,7 @@ export class ExampleComponent  {
             agreeRequired: this.agreeRequiredControl,
             firstName: this.firstNameControl,
             surname: this.surnameControl,
-            email: this.emailControl,
+            email: this.emailControl
         });
     }
 }

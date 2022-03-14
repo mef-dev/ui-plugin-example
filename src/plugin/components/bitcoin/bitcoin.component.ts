@@ -7,7 +7,8 @@ import {DatePipe} from "@angular/common";
 
 @Component({
     selector: 'app-bitcoin',
-    templateUrl: './bitcoin.component.html'
+    templateUrl: './bitcoin.component.html',
+    styleUrls: ['./bitcoin.component.scss']
 })
 export class BitcoinComponent implements OnInit, OnDestroy {
     isLoading = false;

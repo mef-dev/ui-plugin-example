@@ -6,7 +6,7 @@ import {ReplaySubject} from "rxjs";
 @Component({
     selector: 'app-margarita',
     templateUrl: './margarita.component.html',
-    styleUrls: ['./margarita.component.scss'],
+    styleUrls: ['./margarita.component.scss']
 })
 export class MargaritaComponent implements OnDestroy {
     margaritas = [];
