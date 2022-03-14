@@ -3,6 +3,7 @@ import {InjectionToken, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {DatePipe} from '@angular/common';
 import {MatTabsModule} from '@angular/material/tabs';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatCardModule} from '@angular/material/card';
@@ -56,6 +57,7 @@ const importsModules: any[] = [
 ];
 
 
+
 @NgModule({
     imports: [
         importsModules
@@ -69,6 +71,7 @@ const importsModules: any[] = [
     ],
     providers: [
         HttpClient,
+        DatePipe,
         {
             provide: PLUGIN_VERSION.name,
             useValue: PluginComponent,

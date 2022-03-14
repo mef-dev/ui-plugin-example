@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 import {TabsSetService} from "../../services/tabs-set.service";
 import {takeUntil} from "rxjs/operators";
 import {ReplaySubject} from "rxjs";
@@ -8,7 +8,7 @@ import {ReplaySubject} from "rxjs";
     templateUrl: './margarita.component.html',
     styleUrls: ['./margarita.component.scss'],
 })
-export class MargaritaComponent implements OnInit, OnDestroy {
+export class MargaritaComponent implements OnDestroy {
     margaritas = [];
     isLoading = false;
     destroy: ReplaySubject<any> = new ReplaySubject<any>(1);
@@ -20,13 +20,7 @@ export class MargaritaComponent implements OnInit, OnDestroy {
             .subscribe(res => {
                 this.margaritas = res.drinks;
                 this.isLoading = false;
-                console.log(res)
-                console.log(this.margaritas)
             })
-    }
-
-    ngOnInit(): void {
-
     }
 
     ngOnDestroy(): void {
@@ -42,6 +36,6 @@ export class MargaritaComponent implements OnInit, OnDestroy {
                 result.push({ingredient: item[name], measure: item['strMeasure' + (i + 1)]})
             }
         })
-       return result;
+        return result;
     }
 }
