@@ -1,3 +1,31 @@
-<div class="margarita-wrapper" >
-    work
+<div class="margarita-wrapper">
+    <div class="margarita-content" *ngIf="!isLoading; else loaderBlock">
+        <mat-card class="example-card" *ngFor="let margarita of margaritas">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"><img mat-card-image [src]="margarita.strDrinkThumb" alt="Photo of a Shiba Inu"></div>
+                <mat-card-title>{{ margarita.strDrink }}</mat-card-title>
+                <mat-card-subtitle>{{ margarita.strAlcoholic }} - {{ margarita.strCategory }}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="margarita.strDrinkThumb" alt="Photo of a Margarita">
+            <mat-card-content>
+                <h4>Recipe:</h4>
+                <p>
+                    {{ margarita.strInstructions }}
+                </p>
+                <h4>Ingredients:</h4>
+                <mat-list role="list">
+                    <mat-list-item *ngFor="let item of getIngredients(margarita)" role="listitem">
+                        {{ item.ingredient }} {{ item.measure ? ' - ' + item.measure : '' }}
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button color="primary">SHARE</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <ng-template #loaderBlock>
+        not work
+    </ng-template>
 </div>

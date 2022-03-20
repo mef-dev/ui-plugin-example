@@ -15,7 +15,7 @@ export class MargaritaComponent implements OnDestroy {
   isLoading = false;
   destroy: ReplaySubject<any> = new ReplaySubject<any>(1);
   
-  @ViewChild('myGrid') myGrid: jqxGridComponent;
+ 
   baseUrl: string;
   loadProcess: boolean;
   fields: Array<any> = [
@@ -37,14 +37,6 @@ export class MargaritaComponent implements OnDestroy {
   source: any = {
     datatype: 'json',
     dataFields: this.fields,
-    sort: () => {
-      // update the grid and send a request to the server.
-      this.myGrid.updatebounddata('sort');
-    },
-    filter: () => {
-      // update the grid and send a request to the server.
-      this.myGrid.updatebounddata('filter');
-    }
   };
   
   dataAdapter: any = new jqx.dataAdapter(this.source, {

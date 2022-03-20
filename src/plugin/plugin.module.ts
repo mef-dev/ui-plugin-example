@@ -26,6 +26,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { BitcoinComponent } from './components/bitcoin/bitcoin.component';
+import { ExampleComponent } from './components/example/example.component';
 
 export const SETTINGS = new InjectionToken('SETTINGS');
 
@@ -56,7 +58,7 @@ if (devMode) {
 
 @NgModule({
     imports: importsModules,
-    declarations: [PluginComponent, TabsComponent, MargaritaComponent],
+    declarations: [PluginComponent, TabsComponent, MargaritaComponent, BitcoinComponent, ExampleComponent],
     providers: [
         HttpClient,
         TabsSetService,

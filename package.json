@@ -1,6 +1,6 @@
 {
   "name": "app-tabs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "ng": "ng",
     "start": "npm run prebuild && ng serve --configuration=development --port=4201",

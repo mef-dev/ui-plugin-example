@@ -96,11 +96,5 @@ export default {
 		"angular2-draggable",
 		"@angular/router",
 		"@angular/material"
-	],
-	commonjs :{
-		include: ['node_modules/**'],
-		namedExports: {
-			'node_modules/@material-ui/core/styles': ['withStyles']
-		}
-	}
+	]
 };
