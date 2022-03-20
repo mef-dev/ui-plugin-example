@@ -1,0 +1,17 @@
+<div class="bitcoin-wrapper">
+    <div class="bitcoin-content" *ngIf="!isLoading; else loaderBlock">
+        <ngx-datatable class="material"
+                       [headerHeight]="50"
+                       [limit]="5"
+                       [footerHeight]="50"
+                       [columnMode]="ColumnMode.force"
+                       [rows]="rows"
+                       [columns]="columns">
+        </ngx-datatable>
+    </div>
+
+    <ng-template #loaderBlock>
+        <p>not work</p>
+    </ng-template>
+</div>
+

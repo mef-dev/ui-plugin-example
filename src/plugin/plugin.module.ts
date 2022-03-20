@@ -28,6 +28,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { BitcoinComponent } from './components/bitcoin/bitcoin.component';
 import { ExampleComponent } from './components/example/example.component';
+import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 
 export const SETTINGS = new InjectionToken('SETTINGS');
 
@@ -49,6 +50,7 @@ const importsModules: any[] = [
     MatInputModule,
     ReactiveFormsModule,
     MatCheckboxModule,
+    NgxDatatableModule,
     PluginRoutes
 ];
 

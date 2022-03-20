@@ -68,6 +68,7 @@ export default {
 		"@ngx-translate",
 		"@ngx-translate/core",
 		"@ngx-translate/http-loader",
+		"@swimlane/ngx-datatable",
 		'ngx-bootstrap/tooltip',
 		'ngx-bootstrap/tabs',
 		'ngx-bootstrap/modal',
