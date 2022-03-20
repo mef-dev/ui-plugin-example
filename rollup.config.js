@@ -94,6 +94,13 @@ export default {
 		"jqwidgets-ng/jqxwindow",
 		"jqwidgets-ng/jqxexpander",
 		"angular2-draggable",
-		"@angular/router"
+		"@angular/router",
+		"@angular/material"
 	],
+	commonjs :{
+		include: ['node_modules/**'],
+		namedExports: {
+			'node_modules/@material-ui/core/styles': ['withStyles']
+		}
+	}
 };

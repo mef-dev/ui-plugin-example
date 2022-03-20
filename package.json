@@ -1,6 +1,6 @@
 {
   "name": "app-tabs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "ng": "ng",
     "start": "npm run prebuild && ng serve --configuration=development --port=4201",
@@ -20,6 +20,7 @@
     "@angular/core": "^12.2.6",
     "@angular/elements": "^12.2.6",
     "@angular/forms": "~12.2.6",
+    "@angular/material": "^12.2.13",
     "@angular/platform-browser": "~12.2.6",
     "@angular/platform-browser-dynamic": "~12.2.6",
     "@ngx-translate/core": "13.0.0",

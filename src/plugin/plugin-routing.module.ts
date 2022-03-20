@@ -1,5 +1,5 @@
 import {Routes} from '@angular/router';
-import {SimpleItemComponent} from './components/simple-item.component';
+import {TabsComponent} from './components/tabs.component';
 import {PluginComponent} from './plugin.component';
 
 export const routes: Routes = [
@@ -9,7 +9,7 @@ export const routes: Routes = [
         children:
             [
                 {path: '', redirectTo: 'tabs', pathMatch: 'full'},
-                {path: 'tabs', component: SimpleItemComponent},
+                {path: 'tabs', component: TabsComponent},
             ]
     },
 ];

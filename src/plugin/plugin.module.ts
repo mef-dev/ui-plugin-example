@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {InjectionToken, NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import {CommonModule, DatePipe} from '@angular/common';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {jqxGridModule} from 'jqwidgets-ng/jqxgrid';
 import {jqxDateTimeInputModule} from 'jqwidgets-ng/jqxdatetimeinput';
@@ -12,10 +12,20 @@ import {TranslateModule} from '@ngx-translate/core';
 import {PLUGIN_VERSION} from 'src/environments/version';
 
 import {PluginComponent} from './plugin.component';
-import {SimpleItemComponent} from './components/simple-item.component';
+import {TabsComponent} from './components/tabs.component';
 import {CustomerAccountsService} from './services/customer-account.service';
 import {FakeCustomerAccountsService} from './services/fake-customer-account.service';
 import {PluginRoutes, devMode} from './plugin.routing';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatTabsModule} from '@angular/material/tabs';
+import { MargaritaComponent } from './components/margarita/margarita.component';
+import {TabsSetService} from './services/tabs-set.service';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatListModule} from '@angular/material/list';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 export const SETTINGS = new InjectionToken('SETTINGS');
 
@@ -28,6 +38,15 @@ const importsModules: any[] = [
     jqxDropDownListModule,
     jqxChartModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatCheckboxModule,
     PluginRoutes
 ];
 
@@ -37,9 +56,11 @@ if (devMode) {
 
 @NgModule({
     imports: importsModules,
-    declarations: [PluginComponent, SimpleItemComponent],
+    declarations: [PluginComponent, TabsComponent, MargaritaComponent],
     providers: [
         HttpClient,
+        TabsSetService,
+        DatePipe,
         {
             provide: PLUGIN_VERSION.name,
             useValue: PluginComponent,
@@ -49,5 +70,5 @@ if (devMode) {
     ],
     bootstrap: [PluginComponent],
 })
-export class PluginBaseModule {
+export class PluginTabsModule {
 }
