@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 
 @Component({
@@ -13,7 +13,7 @@ export class ExampleComponent {
   surnameControl = new FormControl('');
   emailControl = new FormControl('');
   
-  constructor(fb: FormBuilder) {
+  constructor(@Inject(FormBuilder) fb: FormBuilder) {
     this.options = fb.group({
       agreeRequired: this.agreeRequiredControl,
       firstName: this.firstNameControl,

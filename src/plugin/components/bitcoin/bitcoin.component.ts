@@ -16,10 +16,12 @@ export class BitcoinComponent implements OnInit {
   columns = [{prop: 'name'}, {name: 'EUR'}, {name: 'GBP'}, {name: 'USD'}, {name: 'Updated'}];
   ColumnMode = ColumnMode;
   destroy: ReplaySubject<any> = new ReplaySubject<any>(1);
+  
   constructor(
     @Inject(TabsSetService) private apiService: TabsSetService, 
     @Inject(DatePipe) private datePipe: DatePipe) {
   }
+  
   ngOnInit(): void {
     this.isLoading = true;
     this.apiService.getBitcoinCurrentPrice()
@@ -36,9 +38,9 @@ export class BitcoinComponent implements OnInit {
         this.isLoading = false;
       });
   }
+  
   ngOnDestroy(): void {
     this.destroy.next(null);
     this.destroy.complete();
   }
-
 }

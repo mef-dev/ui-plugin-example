@@ -13,8 +13,6 @@ import {PLUGIN_VERSION} from 'src/environments/version';
 
 import {PluginComponent} from './plugin.component';
 import {TabsComponent} from './components/tabs.component';
-import {CustomerAccountsService} from './services/customer-account.service';
-import {FakeCustomerAccountsService} from './services/fake-customer-account.service';
 import {PluginRoutes, devMode} from './plugin.routing';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -68,9 +66,7 @@ if (devMode) {
         {
             provide: PLUGIN_VERSION.name,
             useValue: PluginComponent,
-        },
-        CustomerAccountsService,
-        FakeCustomerAccountsService
+        }
     ],
     bootstrap: [PluginComponent],
 })

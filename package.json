@@ -1,6 +1,6 @@
 {
   "name": "app-tabs",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "scripts": {
     "ng": "ng",
     "start": "npm run prebuild && ng serve --configuration=development --port=4201",
@@ -53,6 +53,7 @@
     "@angular/compiler": "~12.2.6",
     "@angular/compiler-cli": "~12.2.6",
     "@angular/language-service": "~12.2.6",
+    "@angular/localize": "^12.2.16",
     "@angular/router": "~12.2.6",
     "@types/file-saver": "^2.0.3",
     "@types/jasmine": "~3.9.1",
