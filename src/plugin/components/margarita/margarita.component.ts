@@ -15,8 +15,6 @@ export class MargaritaComponent implements OnDestroy {
   isLoading = false;
   destroy: ReplaySubject<any> = new ReplaySubject<any>(1);
   
- 
-  baseUrl: string;
   loadProcess: boolean;
   fields: Array<any> = [
     {name: 'ACCOUNT_TYPES', type: 'string'},
@@ -52,9 +50,8 @@ export class MargaritaComponent implements OnDestroy {
   });
   
   constructor (
-    @Inject('BASE_URL') baseUrl: string,
     @Inject(FakeCustomerAccountsService) private customerAccountsService: FakeCustomerAccountsService,
-    private apiService: TabsSetService
+    @Inject(TabsSetService) private apiService: TabsSetService
   ) {
     this.isLoading = true;
     this.apiService.getMargaritas()
@@ -63,8 +60,6 @@ export class MargaritaComponent implements OnDestroy {
         this.margaritas = res.drinks || [];
         this.isLoading = false;
       });
-    
-    this.baseUrl = baseUrl;
     
     this.customerAccountsService.getCustomerAccountsByModel({})
       .subscribe((bankAccounts) => {

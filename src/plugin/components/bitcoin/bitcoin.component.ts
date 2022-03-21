@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import {ReplaySubject} from 'rxjs';
 import {TabsSetService} from '../../services/tabs-set.service';
 import {DatePipe} from '@angular/common';
@@ -16,7 +16,9 @@ export class BitcoinComponent implements OnInit {
   columns = [{prop: 'name'}, {name: 'EUR'}, {name: 'GBP'}, {name: 'USD'}, {name: 'Updated'}];
   ColumnMode = ColumnMode;
   destroy: ReplaySubject<any> = new ReplaySubject<any>(1);
-  constructor(private apiService: TabsSetService, private datePipe: DatePipe) {
+  constructor(
+    @Inject(TabsSetService) private apiService: TabsSetService, 
+    @Inject(DatePipe) private datePipe: DatePipe) {
   }
   ngOnInit(): void {
     this.isLoading = true;
