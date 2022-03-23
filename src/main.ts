@@ -2,7 +2,6 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {PluginTabsModule} from './plugin/plugin.module';
 import {environment} from './environments/environment';
 
-export {PluginTabsModule} from './plugin/plugin.module';
 export function getBaseUrl() {
     return environment.apiUrl; // document.getElementsByTagName("base")[0].href;
 }

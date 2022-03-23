@@ -17,7 +17,7 @@ const htmlminOpts = {
 const pluginPath = `external_plugins/${PLUGIN_VERSION.name}-${PLUGIN_VERSION.version}`;
 
 export default {
-	input: "src/main.ts",
+	input: "src/main-plugin.ts",
 	output: {
 		file: `${pluginPath}/${PLUGIN_VERSION.name}-${PLUGIN_VERSION.version}.bundle.js`,
 		format: "system"
@@ -69,16 +69,16 @@ export default {
 		"@ngx-translate/core",
 		"@ngx-translate/http-loader",
 		"@swimlane/ngx-datatable",
-		'ngx-bootstrap/tooltip',
-		'ngx-bootstrap/tabs',
-		'ngx-bootstrap/modal',
-		'ngx-bootstrap/dropdown',
-		'ngx-bootstrap/accordion',
-		'ngx-bootstrap/alert',
-		'ngx-bootstrap/buttons',
-		'ngx-bootstrap/collapse',
-		'ngx-bootstrap/tooltip',
-		'ngx-bootstrap/typeahead',
+		"ngx-bootstrap/tooltip",
+		"ngx-bootstrap/tabs",
+		"ngx-bootstrap/modal",
+		"ngx-bootstrap/dropdown",
+		"ngx-bootstrap/accordion",
+		"ngx-bootstrap/alert",
+		"ngx-bootstrap/buttons",
+		"ngx-bootstrap/collapse",
+		"ngx-bootstrap/tooltip",
+		"ngx-bootstrap/typeahead",
 		"file-saver",
 		"xlsx",
 		"rxjs",
@@ -96,6 +96,14 @@ export default {
 		"jqwidgets-ng/jqxexpander",
 		"angular2-draggable",
 		"@angular/router",
-		"@angular/material"
+		"@angular/material",
+		"@angular/platform-browser/animations",
+		"@angular/material/tabs",
+		"@angular/material/card",
+		"@angular/material/button",
+		"@angular/material/list",
+		"@angular/material/checkbox",
+		"@angular/material/form-field",
+		"@angular/material/input"
 	]
 };
