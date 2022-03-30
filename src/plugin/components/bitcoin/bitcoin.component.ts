@@ -34,7 +34,6 @@ export class BitcoinComponent implements OnInit {
           usd: res.bpi.USD.rate,
           updated: this.datePipe.transform(res.time.updated, 'yyyy-MM-dd HH:MM')
         });
-        console.log(this.rows);
         this.isLoading = false;
       });
   }
