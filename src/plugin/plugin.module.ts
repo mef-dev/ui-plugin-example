@@ -27,8 +27,6 @@ import {MatInputModule} from '@angular/material/input';
 import {BitcoinComponent} from './components/bitcoin/bitcoin.component';
 import {ExampleComponent} from './components/example/example.component';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
-import {RouterModule} from '@angular/router';
-import {routes} from './plugin-routing.module';
 
 export const SETTINGS = new InjectionToken('SETTINGS');
 
@@ -54,7 +52,6 @@ const importsModules: any[] = [
 ];
 
 if (devMode) {
-    console.log(devMode)
     importsModules.push(BrowserModule);
     importsModules.push(BrowserAnimationsModule);
 }
