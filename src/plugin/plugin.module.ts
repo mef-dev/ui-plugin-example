@@ -13,7 +13,7 @@ import {PLUGIN_VERSION} from 'src/environments/version';
 
 import {PluginComponent} from './plugin.component';
 import {TabsComponent} from './components/tabs.component';
-import {PluginRoutes, devMode} from './plugin.routing.dev';
+import {PluginRoutes, devMode} from './plugin.routing';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MargaritaComponent} from './components/margarita/margarita.component';
@@ -50,12 +50,13 @@ const importsModules: any[] = [
     ReactiveFormsModule,
     MatCheckboxModule,
     NgxDatatableModule,
-    BrowserAnimationsModule,
     PluginRoutes
 ];
 
 if (devMode) {
+    console.log(devMode)
     importsModules.push(BrowserModule);
+    importsModules.push(BrowserAnimationsModule);
 }
 
 @NgModule({
