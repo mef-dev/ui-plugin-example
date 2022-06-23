@@ -1,0 +1,13 @@
+{
+    "dirty": false,
+    "raw": "",
+    "hash": "",
+    "distance": null,
+    "tag": null,
+    "semver": null,
+    "suffix": "",
+    "semverString": null,
+    "name": "plugin-example",
+    "version": "0.0.0",
+    "main": "main.js"
+}
