@@ -25,5 +25,6 @@ After that the content of the dist folder can be uploaded into the platform.
 
 # Useful links
 
-> *Guide to register package into the platform:* https://mef.dev/en/dev_guides/upload_ui_plugin.md
-> *Creation of UI package with Backend logic:* https://mef.dev/en/dev_guides/portal_plugin.md
+> *Guide to register package into the platform: https://mef.dev/en/dev_guides/upload_ui_plugin.md*
+
+> *Creation of UI package with Backend logic: https://mef.dev/en/dev_guides/portal_plugin.md*
