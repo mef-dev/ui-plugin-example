@@ -1,13 +1,13 @@
 {
-    "dirty": false,
-    "raw": "9134a93",
-    "hash": "9134a93",
+    "dirty": true,
+    "raw": "408d539-dirty",
+    "hash": "408d539",
     "distance": null,
     "tag": null,
     "semver": null,
-    "suffix": "9134a93",
+    "suffix": "408d539-dirty",
     "semverString": null,
     "name": "plugin-example",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "main": "main.js"
 }
