@@ -108,5 +108,8 @@
       }
     }
   },
-  "defaultProject": "plugin-example"
+  "defaultProject": "plugin-example",
+  "cli": {
+    "analytics": false
+  }
 }
