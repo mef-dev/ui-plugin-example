@@ -1,13 +1,13 @@
 {
     "dirty": true,
-    "raw": "v1-0-g0bec46e-dirty",
-    "hash": "g0bec46e",
-    "distance": 0,
-    "tag": "v1",
+    "raw": "48ba33e-dirty",
+    "hash": "48ba33e",
+    "distance": null,
+    "tag": null,
     "semver": null,
-    "suffix": "0-g0bec46e-dirty",
-    "semverString": "",
-    "name": "plugin-example",
-    "version": "1.0.0",
+    "suffix": "48ba33e-dirty",
+    "semverString": null,
+    "name": "december-new-plugin",
+    "version": "0.0.2",
     "main": "main.js"
 }
