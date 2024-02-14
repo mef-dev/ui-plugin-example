@@ -1,0 +1,26 @@
+{
+    "dirty": true,
+    "raw": "v16.2.0-7-g74eaee1-dirty",
+    "hash": "g74eaee1",
+    "distance": 7,
+    "tag": "v16.2.0",
+    "semver": {
+        "options": {
+            "loose": false,
+            "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "v16.2.0",
+        "major": 16,
+        "minor": 2,
+        "patch": 0,
+        "prerelease": [],
+        "build": [],
+        "version": "16.2.0"
+    },
+    "suffix": "7-g74eaee1-dirty",
+    "semverString": "16.2.0+7.g74eaee1.dirty",
+    "name": "simple-plugin-example",
+    "version": "0.0.1",
+    "main": "main.js"
+}

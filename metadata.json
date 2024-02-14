@@ -1,0 +1,17 @@
+{
+    "name": "SimplePluginExample",
+    "serviceType": "UI",
+    "description": "SimplePluginExample",
+    "dependencies": [],
+    "config":{
+      "routesUI":[
+        {
+            "lang":"en",
+            "routerLink":"test",
+            "label":"test"
+        }
+      ]
+    },
+    "externalUrl": null,
+    "configuration": null
+  }
